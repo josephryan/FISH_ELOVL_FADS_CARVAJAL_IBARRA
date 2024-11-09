@@ -1,14 +1,14 @@
-# MAPK Phylogeny Phylotocol
+# FADS and ELOVL Phylogeny Phylotocol
  
  Principal Investigators: Karen Carvajal-Soriano, Leonardo Ibarra-Castro, Joseph Ryan  
 
- Version Number: v.0.01
+ Version Number: v.0.02
 
- Date: 6 Nov 2024  
+ Date: 9 Nov 2024  
 
 ## SUMMARY OF CHANGES FROM PREVIOUS VERSION
 
-NA
+v.0.02 added `-B 1000` to iqtree commands to run 1000 ultrafast bootstraps
 
 ## 1 INTRODUCTION: BACKGROUND INFORMATION AND SCIENTIFIC RATIONALE  
 
@@ -69,8 +69,8 @@ hmm2aln.pl --fasta_dir=aa --threads=100 --hmm=PF00487.hmm --name=FADS > FADS.aln
 Run maximum-likelihood trees
 
 ```
-iqtree -T AUTO -s ELOVL.aln.fa
-iqtree -T AUTO -s FADS.aln.fa
+iqtree -B 1000 -T AUTO -s ELOVL.aln.fa
+iqtree -B 1000 -T AUTO -s FADS.aln.fa
 ```
 
 ## 3 WORK COMPLETED SO FAR WITH DATES  
@@ -79,8 +79,7 @@ iqtree -T AUTO -s FADS.aln.fa
 
 ## APPENDIX
 
-Version&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Date&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Significant Revisions  
-1.1  
-1.2  
-1.3  
-1.4  
+Version&nbsp; &nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;Date&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Significant Revisions    
+0.0.2  added -B 1000 to iqtree commands to include ultrafast bootstraps
+0.0.3  
+0.0.4  
